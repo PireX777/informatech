@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="contato.css">
+    <link rel="stylesheet" type="text/css" href="inicio.css">
+</head>
+<!--
+<script>
+    function calc_total(){
+    var qtd= parseInt(document.getElementById('idQtd').value);
+    tot= qtd * 1500; /*cada google glass custa 1500 dólares */
+    document.getElementById('idTot').value= tot;
+    }
+</script>
+
+<script language="javascript" src="_javascript/funcoes.js">
+
+</script>-->
+
+
+<body>
+
+<div id="interface">
+
+    <header id="cabecalho">
+
+    <hgroup>
+        <h1>Profissões Valorizadas na Área de T.I</h1>
+        <h2>Procure sua Empresa</h2>
+    </hgroup>
+
+        <img id="icone" src="imagens/perfect.png">
+
+            <nav id="menu">
+
+       <h1> Menu Principal </h1>
+
+        <ul class="navegacao">
+           <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto ('_imagens/home.png')"><a href="index.html">Home</a></li>
+           <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto ('_imagens/home.png')"><a href="engenharia de software.html">Engenharia De Software</a></li>
+            <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto ('_imagens/home.png')"><a href="seguranca de dados.html">Segurança De Dados</a></li>
+           <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto ('_imagens/home.png')"><a href="analista de sistemas.html">Analista de Sistemas</a></li>
+            <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto ('_imagens/home.png')"><a href="sobre nos.html">Sobre Nós</a></li>
+            <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto ('_imagens/home.png')"><a href="fale conosco.html">Procure Sua Empresa</a></li>
+        </ul>
+
+    <nav/>
+    </header>
+
+    <hgroup id="cabecalho-noticia-principal">
+                <h3>Procure sua Empresa</h3>
+                <h1 class="especial">Formulario de Contato</h1>
+                <h2>por Raphael Martins</h2>
+                <h3 class="direita">Atualizado em 14/junho/2023</h3>
+            </hgroup>
+
+    <div id="formulariogpt">
+
+        <form method="post" id="idContato" action="mailto:apenasjogoscrackeados@gmail.com" oninput="calc_total()">
+
+            <div class="gpt">
+
+           <fieldset id="idUsuario">
+            <legend>   Identificação do Usuário </legend>
+            <p><label for="idNome">Nome:<input type="text" name="nNome" id="idNome" size="20" maxlength="40" placeholder="Nome Completo"></label>  </p>
+               <p><label for="idSenha">Senha:<input type="password" name="nSenha" id="idSenha" size="8" maxlength="8" placeholder="até 8 dígitos"></label> </p>
+               <p><label for="idEmail"> E-mail: <input type="email" name="nEmail" id="idEmail" size="20" maxlength="40"> </label></p>
+            <fieldset id="idSexo">
+                <legend>Sexo:</legend>
+                <input type="radio" name="nSexo" id="idMasc" checked><label for="idMasc"> Masculino </label><br>
+                <input type="radio" name="nSexo" id="idFem"><label for="idFem"> Feminino </label><br>
+                <input type="radio" name="nSexo" id="idBm"><label for="idBm"> Não Binário </label>
+            </fieldset>
+               <p><label for="idNasc">Data de Nascimento:</label><input type="date" name="nasc" id="idNasc"></p>
+
+           </fieldset>
+
+       <fieldset id="idEndereco">
+           <legend>Endereço do Usuário </legend>
+            <p><label for="idRua"> Logradouro:</label> <input type="text" name="nRua" id="idRua" size="13" maxlength="80" placeholder="Rua, Av, Travessa..."></p>
+           <p><label for="idNum">Número:</label><input type="number" name="nNum" id="idNum" min="0" max="9999" value="0"></p>
+            <p><label for="idEst">Estado:</label>
+                <select name="nEst" id="idEst">
+                    <optgroup label="Região Sudeste">
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="ES">Espirito Santos</option>
+                    </optgroup>
+                    <optgroup label="Região Sul">
+                        <option value="PR">Parána</option>
+                        <option value="RS">Rio Grande Do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>
+                </select>
+            </p>
+           <p><label for="idCid">Cidade:</label> <input type="text" name="nCid" id="idCid" size="20" maxlength="40" placeholder="Sua Cidade" list="cidades">
+           <datalist id="cidades">
+               <option value="Rio de Janeiro"></option>
+               <option value="Nova Iguaçu"></option>
+               <option value="Niterói"></option>
+               <option value="Belford Roxo"></option>
+           </datalist>
+           </p>
+        </fieldset>
+
+        <fieldset id="idMensagem">
+
+        <legend>Qual a sua Área de atuação</legend>
+            <p><lable for="idUrg"> Grau de Urgência:</lable> Min<input type="range" name="nUrg" id="idUrg" Min="0" Max="10" step="2"> Máx </p>
+            <p><label for="idMsg">Mensagem:</label>
+                <textarea name="nMsg" id="idMsg" cols="45" rows="5" maxlength="250" placeholder="Deixe aqui sua mensagem"></textarea>
+            </p>
+        </fieldset>
+
+        <fieldset id="idPedido">
+        <legend>Procuro Vagas de Empresas </legend>
+            <p><input type="checkbox" name="nPed" id="idPed" ><label for="idPed"></label> Aceitar receber informações por Email</label></p>
+
+        </fieldset>
+
+
+    <input type="image" src="imagens/botao-enviar.png" name="nEnviar">
+
+                </div>
+
+</form>
+
+
+
+<footer id="rodape">
+        <p>Copyright 2023 - by Raphael Martins<br>
+       <a href="Sobre Nós.html" target="_blank"> Sobre Mim </a>
+    </footer>
